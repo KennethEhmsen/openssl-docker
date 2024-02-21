@@ -1,9 +1,10 @@
-FROM alpine
+FROM debian-slim:latest
 
-MAINTAINER Maik Ellerbrock (https://github.com/ellerbrock)
+MAINTAINER Kenneth Ehmsen (https://github.com/KennethEhmsen)
 
-RUN apk update && \
-  apk add --no-cache openssl && \
-  rm -rf /var/cache/apk/*
+RUN apt update && \
+    apt upgrade && \
+    apt install --no-cache openssl && \
+    rm -rf /var/cache/apk/*
 
 ENTRYPOINT ["openssl"]
