@@ -1,4 +1,4 @@
-FROM debian-slim:latest
+FROM debian:stable-slim
 
 MAINTAINER Kenneth Ehmsen (https://github.com/KennethEhmsen)
 
